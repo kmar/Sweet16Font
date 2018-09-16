@@ -22,6 +22,8 @@ included files:
         ImGui demo app screenshot showing some Czech (Latin extended A) glyphs
 
     [proportional, no kerning]
+    (note that 1px extra horizontal spacing probably looks better, but this can be done manually
+     and I'm too lazy to reexport the font)
     Sweet16.ttf
         final exported TrueType font
     Sweet16.f8

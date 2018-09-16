@@ -136,6 +136,8 @@ static ImFont *AddSweet16Font()
     config.OversampleV = 1;
     config.PixelSnapH = true;
     config.SizePixels = 16;
+    // the proportional variant probably looks better with 1px extra horizontal spacing (just uncomment the following line)
+    //config.GlyphExtraSpacing.x = 1;
 
     // copy font name manually to avoid warnings
     const char *name = "Sweet16.ttf, 16px";
