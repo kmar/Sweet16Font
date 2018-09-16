@@ -1,0 +1,35 @@
+Sweet16mono - a small 8x16 pixel-precise monospace font (Latin + supplemental + extended A)
+(c) 2018 Martin Sedlák
+
+licensed under boost software license (see LICENSE)
+    - meaning you don't have to give credit/embed license
+
+included files:
+    Sweet16mono.ttf
+        final exported TrueType font
+    Sweet16mono.f8
+        original bitmap data, 16 bytes per character, 384 characters map to unicode u0000 ... u017f
+        msbit = leftmost
+        there are some undefined characters (all bits zero), so anything except 0x20 and 0xa0 should be probably skipped
+    Sweet16mono_bmfont.fnt and
+    Sweet16mono_bmfont_0.png
+        BMFont-exported as bitmap font, char id matches unicode index
+    Sweet16mono_ImGui.inl
+        C++ inline file for ImGui
+        just include and call AddSweet16MonoFont()
+    Sweet16mono_ImGui.png
+        ImGui demo app screenshot showing some Czech (Latin extended A) glyphs
+    LICENSE
+        License text
+    README
+        this readme
+
+changelog:
+    09-16-2018 initial version
+
+history:
+    Sometime ago, I found my ancient bitfield-based font editor and because I wanted a pixel-perfect small font for UI so I made my own.
+    When I realized that it's possible to fake pixel-perfect fonts using ttf and proper scaling, I decided to give it a try.
+    After many *sighs*, not being able to find any working converter, I wrote a simple script and exported the outlines (using a very dumb
+    RLE-based "tracing" algorithm) as svg files and imported them using a python script to FontForge (awesome tool). Several tweaking attempts
+    later I was finally able to make it render correctly in ImGui so here it is. Have fun.
