@@ -5,6 +5,7 @@ licensed under boost software license (see LICENSE)
     - meaning you don't have to give credit/embed license
 
 included files:
+    [monospace]
     Sweet16mono.ttf
         final exported TrueType font
     Sweet16mono.f8
@@ -19,6 +20,26 @@ included files:
         just include and call AddSweet16MonoFont()
     Sweet16mono_ImGui.png
         ImGui demo app screenshot showing some Czech (Latin extended A) glyphs
+
+    [proportional, no kerning]
+    Sweet16.ttf
+        final exported TrueType font
+    Sweet16.f8
+        original bitmap data, 16 bytes per character, 384 characters map to unicode u0000 ... u017f
+        msbit = leftmost
+        there are some undefined characters (all bits zero), so anything except 0x20 and 0xa0 should be probably skipped
+    Sweet16_charwidths.txt
+        constains char index (unicode) width in pixels (no including spacing) for Sweet16.f8
+    Sweet16_bmfont.fnt and
+    Sweet16_bmfont_0.png
+        BMFont-exported as bitmap font, char id matches unicode index
+    Sweet16_ImGui.inl
+        C++ inline file for ImGui
+        just include and call AddSweet16Font()
+    Sweet16_ImGui.png
+        ImGui demo app screenshot showing some Czech (Latin extended A) glyphs
+
+    [other]
     LICENSE
         License text
     README
